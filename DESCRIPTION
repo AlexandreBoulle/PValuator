@@ -1,0 +1,14 @@
+Package: PValuator
+Title: Package for determining the optimal p-value using mathematical methods
+Version: 1.0.0
+Authors@R: 
+    person("Alexandre", "Boullé", , "alexandre.boulle@ijm.fr", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: The methods (Euclidean distance, geometry of Bézier curves) aim to determine the area where the curvature of the curve representing the number of values obtained as a function of the p-value is most pronounced.
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    graphics,
+    stats
