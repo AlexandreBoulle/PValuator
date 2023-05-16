@@ -12,7 +12,7 @@ R package for determining the optimal p-value using mathematical methods
 
 ## Installation
 ### Linux installation
-Open a R console or RStudio and use this command :
+Open R console or RStudio and use this command :
 
 ```
 install.packages("/ton_chemin/PValuator_1.0.0.tar.gz", repo = NULL, type = "source")
