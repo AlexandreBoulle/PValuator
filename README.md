@@ -7,17 +7,24 @@
 ## Presentation
 R package for determining the optimal p-value using mathematical methods.
 
-The methods (Euclidean distance, geometry of Bézier curves) aim to determine the area where the curvature of the curve, representing the number of values obtained as a function of the p-value, is most pronounced.
+The methods (Euclidean distance, geometry of Bézier curves) aim to determine the area where the curvature of the curve, representing the number of elements obtained as a function of the p-value, is most pronounced.
 
 &nbsp;
 
 
 ## Installation
 ### Linux installation
-Open R console or RStudio and use this command :
+Open a terminal and use these commands :
 
 ```
-install.packages("/your_path/PValuator_1.0.0.tar.gz", repo = NULL, type = "source")
+git clone https://github.com/AlexandreBoulle/PValuator.git
+tar -czvf PValuator.tar.gz ./PValuator/
+```
+
+Open a R console or RStudio and use this command :
+
+```
+install.packages("/your_path/PValuator.tar.gz", repo = NULL, type = "source")
 ```
 
 ### Windows installation
@@ -34,12 +41,19 @@ install.packages("/your_path/PValuator_1.0.0.tar.gz", repo = NULL, type = "sourc
 library(PValuator)
 ```
 
-* Prepare a dataframe (df) containing two columns (value of each p-value tested and the associated number of occurrences / percentage)
+* Prepare a dataframe (df) containing two columns (value of each p-value and the associated number of occurrences / percentage)
 * **NOTE** : if you have a table containing elements (e.g. genomic regions) associated with a p-value so you can prepare a dataframe usable by the package :
 
 ```
 prepare_data(data, column, nbr.pv = 20)
 ```
+
+* To obtain more informations about parameters used in this function, you can run this R command :
+
+```
+?prepare_data
+```
+  
 
 ### Method 1 : Bézier curves
 
