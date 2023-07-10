@@ -6,7 +6,8 @@
 
 ## Presentation
 R package for determining the optimal p-value using mathematical methods.
-The methods (Euclidean distance, geometry of Bézier curves) aim to determine the area where the curvature of the curve representing the number of values obtained as a function of the p-value is most pronounced.
+
+The methods (Euclidean distance, geometry of Bézier curves) aim to determine the area where the curvature of the curve, representing the number of values obtained as a function of the p-value, is most pronounced.
 
 &nbsp;
 
