@@ -2,13 +2,19 @@
 % Please edit documentation in R/euclidist_pvalue.R
 \name{euclidist_pvalue}
 \alias{euclidist_pvalue}
-\title{Show p-value thanks to the distance method}
+\title{p-value detection (Euclidean distance)}
 \usage{
-euclidist_pvalue(df)
+euclidist_pvalue(df, cv = "no", sp = 0.5, fraction.var = 0.005)
 }
 \arguments{
-\item{df}{as a dataframe containing p-values associated to a number (occurrence, percentage, ...)}
+\item{df}{a character containing p-values associated to a number (occurrence, percentage, ...)}
+
+\item{cv}{a string ("yes" or "no") to use or not the cross validation method in order to detect the best value for span parameter}
+
+\item{sp}{an integer or a float to use as the span parameter in the loess() function}
+
+\item{fraction.var}{keep lines if variance of p-value occurrences is greater than a fraction of total variance}
 }
 \description{
-Show p-value thanks to the distance method
+Determine p-value thanks to the distance method
 }

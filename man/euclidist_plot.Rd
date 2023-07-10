@@ -2,12 +2,32 @@
 % Please edit documentation in R/euclidist_pvalue.R
 \name{euclidist_plot}
 \alias{euclidist_plot}
-\title{Plot graphic to show determination of p-value according to the euclidean distance method}
+\title{Graphic for p-value detection (Euclidean distance)}
 \usage{
-euclidist_plot(df)
+euclidist_plot(
+  df,
+  cv = "no",
+  sp = 0.5,
+  fraction.var = 0.005,
+  main.title = "Detect the furthest point of the line",
+  x.title = "-log10(p-value)",
+  y.title = "Percentage of different regions"
+)
 }
 \arguments{
-\item{df}{as a dataframe containing p-values associated to a number (occurrence, percentage, ...)}
+\item{df}{a character containing p-values associated to a number (occurrence, percentage, ...)}
+
+\item{cv}{a string ("yes" or "no") to use or not the cross validation method in order to detect the best value for span parameter}
+
+\item{sp}{an integer or a float to use as the span parameter in the loess() function}
+
+\item{fraction.var}{keep lines if variance of p-value occurrences is greater than a fraction of total variance}
+
+\item{main.title}{a title for the graph}
+
+\item{x.title}{a title for abscissa axis}
+
+\item{y.title}{a title for ordinate axis}
 }
 \description{
 Plot graphic to show determination of p-value according to the euclidean distance method
