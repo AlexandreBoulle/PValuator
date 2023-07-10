@@ -37,7 +37,7 @@ add.pvalues <- function(list.pv, l){
 
 #' @title Dataframe preparation
 #' @description Prepare a dataframe usable by the PValuator
-#' @param data a dataframe from which we can build a dataframe usable by the PValuator
+#' @param data a table from which we can build a dataframe usable by the PValuator
 #' @param column the column of interest (p-values)
 #' @param nbr.pv the minimum number of p-values
 #' @export

@@ -203,7 +203,7 @@ bezier_treatment <- function(df, cv, sp, fraction.var){
 #' @param x.title a title for abscissa axis
 #' @param y.title a title for ordinate axis
 #' @export
-bezier_plot <- function(df, cv = "no", sp = 0.5, fraction.var = 5e-3, main.title = "Automatic detection of p-value : Bezier curve", x.title = "-log10(p-value)", y.title = "Percentage of different regions"){
+bezier_plot <- function(df, cv = "no", sp = 0.5, fraction.var = 5e-3, main.title = "Automatic detection of p-value : Bezier curve", x.title = "-log10(p-value)", y.title = "Number / Percentage"){
   # Recovering results in order to show the plot
   results <- bezier_treatment(df, cv, sp, fraction.var)
   x <- results[[1]]

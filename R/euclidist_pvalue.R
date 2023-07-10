@@ -108,7 +108,7 @@ euclidist_treatment <- function(df, cv, sp, fraction.var){
 #' @param x.title a title for abscissa axis
 #' @param y.title a title for ordinate axis
 #' @export
-euclidist_plot <- function(df, cv = "no", sp = 0.5, fraction.var = 5e-3, main.title = "Detect the furthest point of the line", x.title = "-log10(p-value)", y.title = "Percentage of different regions"){
+euclidist_plot <- function(df, cv = "no", sp = 0.5, fraction.var = 5e-3, main.title = "Detect the furthest point of the line", x.title = "-log10(p-value)", y.title = "Number / Percentage"){
   # Recovering results in order to show the plot
   results <- euclidist_treatment(df, cv, sp, fraction.var)
   x <- results[[1]]
