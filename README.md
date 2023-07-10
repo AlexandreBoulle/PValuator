@@ -17,7 +17,7 @@ The methods (Euclidean distance, geometry of Bézier curves) aim to determine th
 Open R console or RStudio and use this command :
 
 ```
-install.packages("/ton_chemin/PValuator_1.0.0.tar.gz", repo = NULL, type = "source")
+install.packages("/your_path/PValuator_1.0.0.tar.gz", repo = NULL, type = "source")
 ```
 
 ### Windows installation
@@ -34,20 +34,25 @@ install.packages("/ton_chemin/PValuator_1.0.0.tar.gz", repo = NULL, type = "sour
 library(PValuator)
 ```
 
-* Prepare a dataframe containing two columns (value of each p-value tested and the associated number of occurrences / percentage)
+* Prepare a dataframe (df) containing two columns (value of each p-value tested and the associated number of occurrences / percentage)
+* **NOTE** : if you have a table containing elements (e.g. genomic regions) associated with a p-value so you can prepare a dataframe usable by the package :
+
+```
+prepare_data(data, column, nbr.pv = 20)
+```
 
 ### Method 1 : Bézier curves
 
 * Display the graphical result for the method using the geometric properties of Bézier curves :
 
 ```
-bezier_plot(df)
+bezier_plot(df, cv = "no", sp = 0.5, fraction.var = 5e-3, main.title = "Automatic detection of p-value : Bezier curve", x.title = "-log10(p-value)", y.title = "Number / Percentage")
 ```
 
 * Show the determined p-value :
 
 ```
-bezier_pvalue(df)
+bezier_pvalue(df, cv = "no", sp = 0.5, fraction.var = 5e-3)
 ```
 
 ### Method 2 : Euclidean distance
@@ -55,13 +60,13 @@ bezier_pvalue(df)
 * Display the graphical result for the method using the Euclidean distance between a line and the curve :
 
 ```
-euclidist_plot(df)
+euclidist_plot(df, cv = "no", sp = 0.5, fraction.var = 5e-3, main.title = "Detect the furthest point of the line", x.title = "-log10(p-value)", y.title = "Number / Percentage")
 ```
 
 * Show the determined p-value :
 
 ```
-euclidist_pvalue(df)
+euclidist_pvalue(df, cv = "no", sp = 0.5, fraction.var = 5e-3)
 ```
 
 
