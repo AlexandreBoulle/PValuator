@@ -13,7 +13,7 @@ The methods (Euclidean distance, geometry of Bézier curves) aim to determine th
 
 
 ## Installation
-### Linux installation
+### Linux / macOS installation
 Open a terminal and use these commands :
 
 ```
@@ -27,7 +27,7 @@ Open a R console or RStudio and use this command :
 install.packages("/your_path/PValuator.tar.gz", repo = NULL, type = "source")
 ```
 
-### Windows installation
+<!-- ### Windows installation -->
 
 
 &nbsp;
