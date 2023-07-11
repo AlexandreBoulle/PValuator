@@ -13,7 +13,7 @@ The methods (Euclidean distance, geometry of Bézier curves) aim to determine th
 
 
 ## Installation
-### Linux /macOS installation
+### Linux / macOS installation
 Open a terminal and use these commands :
 
 ```
