@@ -69,6 +69,11 @@ bezier_plot(df, cv = "no", sp = 0.5, fraction.var = 5e-3, main.title = "Automati
 bezier_pvalue(df, cv = "no", sp = 0.5, fraction.var = 5e-3)
 ```
 
+* Example :
+
+<div align="center"><img src="Example_Bezier.png" width="500"></div>
+
+
 ### Method 2 : Euclidean distance
 
 * Display the graphical result for the method calculating the Euclidean distance between a line and the curve :
@@ -83,6 +88,12 @@ euclidist_plot(df, cv = "no", sp = 0.5, fraction.var = 5e-3, main.title = "Detec
 euclidist_pvalue(df, cv = "no", sp = 0.5, fraction.var = 5e-3)
 ```
 
+* Example :
+
+<div align="center"><img src="Example_Euclidean-Distance.png" width="500"></div>
+
+
+&nbsp;
 
 &nbsp;
 
