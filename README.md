@@ -9,6 +9,8 @@ The PValuator is an R package that automatically determines the optimal p-value 
 
 The methods (Euclidean distance, geometry of Bézier curves) aim to determine the area where the curvature of the curve, representing the number of elements obtained as a function of the p-value, is most pronounced.
 
+**R version ⩾ 4.2.1** is recommended.
+
 &nbsp;
 
 
@@ -27,7 +29,15 @@ Open a R console or RStudio and use this command :
 install.packages("/your_path/PValuator.tar.gz", repo = NULL, type = "source")
 ```
 
-<!-- ### Windows installation -->
+### Windows installation
+
+* Click on the green "Code" button (top right) and choose "Download ZIP"
+* Uncompress the folder and then compress it to ".tar.gz" using 7-Zip or another tool (compress to ".tar" and then compress ".tar" folder to ".gz")
+* Open a R console or RStudio and use this command :
+
+```
+install.packages("/your_path/PValuator-main.tar.gz", repo = NULL, type = "source")
+```
 
 
 &nbsp;
