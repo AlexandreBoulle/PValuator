@@ -1,5 +1,5 @@
 ####################
-# PValuator        #
+#    PVALUATOR     #
 # Alexandre BOULLE #
 ####################
 
@@ -41,7 +41,7 @@ add.pvalues <- function(list.pv, l){
 #' @param column the column name of interest (p-value column : a character)
 #' @param nbr.pv the minimum number of p-values
 #' @export
-prepare_data <- function(data, column, nbr.pv = 20){
+prepare_data <- function(data, column, min.nbr.pv = 20){
 
   # Remove NA
   data <- data[!is.na(data[, column]), ]
@@ -66,7 +66,7 @@ prepare_data <- function(data, column, nbr.pv = 20){
   add.pvalue.sup <- c(5)
   k <- 1
   # While we haven't quite values to show a distribution we continue this procedure
-  while (length(pvalues) < nbr.pv){
+  while (length(pvalues) < min.nbr.pv){
     pvalues <- c()
     # For each exponent
     for (i in 1:length(list.exp)){
