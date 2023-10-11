@@ -76,7 +76,7 @@ library(PValuator)
 * **NOTE** : if you have a table containing elements (e.g. genomic regions) associated with a p-value so you can prepare a dataframe usable by the package :
 
 ```
-prepare_data(data, column, nbr.pv = 20)
+prepare_data(data, column, min.nbr.pv = 20)
 ```
 
 * To obtain more informations about parameters used in this function (or other R functions), you can run this R command :
