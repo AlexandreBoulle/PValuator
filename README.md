@@ -15,7 +15,28 @@ The methods (Euclidean distance, geometry of Bézier curves) aim to determine th
 
 
 ## Installation
-### Linux / macOS installation
+
+### Installation with R commands
+
+Open a R console or RStudio and use this code :
+
+```
+load.install.package <- lapply(
+  c("devtools"),
+  FUN = function(x) {
+    if (!require(x, character.only = TRUE)) {
+      install.packages(x, dependencies = TRUE)
+      library(x, character.only = TRUE)
+    }
+  }
+)
+
+devtools::install_github("AlexandreBoulle/PValuator")
+```
+
+### Installation from source code
+
+#### Linux / macOS installation
 Open a terminal and use these commands :
 
 ```
@@ -29,7 +50,7 @@ Open a R console or RStudio and use this command :
 install.packages("/your_path/PValuator.tar.gz", repo = NULL, type = "source")
 ```
 
-### Windows installation
+#### Windows installation
 
 * Click on the green "Code" button (top right) and choose "Download ZIP"
 * Uncompress the folder and then compress it to ".tar.gz" using 7-Zip or another tool (compress to ".tar" and then compress ".tar" folder to ".gz")
@@ -63,28 +84,9 @@ prepare_data(data, column, nbr.pv = 20)
 ```
 ?prepare_data
 ```
-  
-
-### Method 1 : Bézier curves
-
-* Display the graphical result for the method using the geometric properties of Bézier curves :
-
-```
-bezier_plot(df, cv = "no", sp = 0.5, fraction.var = 5e-3, main.title = "Automatic detection of p-value : Bezier curve", x.title = "-log10(p-value)", y.title = "Number / Percentage")
-```
-
-* Show the determined p-value :
-
-```
-bezier_pvalue(df, cv = "no", sp = 0.5, fraction.var = 5e-3)
-```
-
-* Example :
-
-<div align="center"><img src="Example_Bezier.png" width="500"></div>
 
 
-### Method 2 : Euclidean distance
+### Method 1 : Euclidean distance
 
 * Display the graphical result for the method calculating the Euclidean distance between a line and the curve :
 
@@ -101,6 +103,25 @@ euclidist_pvalue(df, cv = "no", sp = 0.5, fraction.var = 5e-3)
 * Example :
 
 <div align="center"><img src="Example_Euclidean-Distance.png" width="500"></div>
+
+
+### Method 2 : Bézier curves
+
+* Display the graphical result for the method using the geometric properties of Bézier curves :
+
+```
+bezier_plot(df, cv = "no", sp = 0.5, fraction.var = 5e-3, main.title = "Automatic detection of p-value : Bezier curve", x.title = "-log10(p-value)", y.title = "Number / Percentage")
+```
+
+* Show the determined p-value :
+
+```
+bezier_pvalue(df, cv = "no", sp = 0.5, fraction.var = 5e-3)
+```
+
+* Example :
+
+<div align="center"><img src="Example_Bezier.png" width="500"></div>
 
 
 &nbsp;
