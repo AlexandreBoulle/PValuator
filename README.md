@@ -150,8 +150,8 @@ Using a result table from a differential analysis of replication time profiles (
 
 ```
 data("table_results_per_pvalue_differential-analysis_STARTR_Analyzer_Repliseq")
-df.repli <- table_results_per_pvalue_differential-analysis_STARTR_Analyzer_Repliseq
-df.repli <- df[, c(1, 3)]
+df.repli <- table_results_per_pvalue_differential_analysis_STARTR_Analyzer_Repliseq
+df.repli <- df.repli[, c(1, 3)]
 
 # Method 1
 euclidist_plot(df.repli, sp = 0.5, fraction.var = 5e-3)
