@@ -149,7 +149,7 @@ bezier_pvalue(df.rna, cv = "yes", fraction.var = 1e-2)
 Using a result table from a differential analysis of replication time profiles ([START-R](https://github.com/thomasdenecker/START-R/tree/master) Analyzer) :
 
 ```
-data("table_results_per_pvalue_differential-analysis_STARTR_Analyzer_Repliseq")
+data("table_results_per_pvalue_differential_analysis_STARTR_Analyzer_Repliseq")
 df.repli <- table_results_per_pvalue_differential_analysis_STARTR_Analyzer_Repliseq
 df.repli <- df.repli[, c(1, 3)]
 
