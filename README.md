@@ -102,7 +102,7 @@ euclidist_pvalue(df, cv = "no", sp = 0.5, fraction.var = 5e-3)
 
 * Example :
 
-<div align="center"><img src="Example_Euclidean-Distance.png" width="500"></div>
+<div align="center"><img src="figures/Example_Euclidean-Distance.png" width="500"></div>
 
 
 ### Method 2 : Bézier curves
@@ -121,7 +121,7 @@ bezier_pvalue(df, cv = "no", sp = 0.5, fraction.var = 5e-3)
 
 * Example :
 
-<div align="center"><img src="Example_Bezier.png" width="500"></div>
+<div align="center"><img src="figures/Example_Bezier.png" width="500"></div>
 
 
 &nbsp;
@@ -129,4 +129,4 @@ bezier_pvalue(df, cv = "no", sp = 0.5, fraction.var = 5e-3)
 &nbsp;
 
 
-<div align="center"><img src="All_logos.png" width="500"></div>
+<div align="center"><img src="figures/All_logos.png" width="500"></div>
