@@ -126,6 +126,45 @@ bezier_pvalue(df, cv = "no", sp = 0.5, fraction.var = 5e-3)
 
 &nbsp;
 
+
+## Examples
+
+Using a result table from a differential analysis of gene expression (DESeq2) between two conditions :
+
+```
+data("deseq2_cond1_vs_cond2_RNAseq")
+df.rna <- deseq2_cond1_vs_cond2_RNAseq
+column <- "padj"
+df.rna <- prepare_data(df.rna, column)
+
+# Method 1
+euclidist_plot(df.rna, cv = "yes", fraction.var = 1e-2)
+euclidist_pvalue(df.rna, cv = "yes", fraction.var = 1e-2)
+
+# Method 2
+bezier_plot(df.rna, cv = "yes", fraction.var = 1e-2)
+bezier_pvalue(df.rna, cv = "yes", fraction.var = 1e-2)
+```
+
+Using a result table from a differential analysis of replication time profiles (START-R Analyzer) :
+
+```
+data("table_results_per_pvalue_differential-analysis_STARTR_Analyzer_Repliseq")
+df.repli <- table_results_per_pvalue_differential-analysis_STARTR_Analyzer_Repliseq
+df.repli <- df[, c(1, 3)]
+
+# Method 1
+euclidist_plot(df.repli, sp = 0.5, fraction.var = 5e-3)
+euclidist_pvalue(df.repli, sp = 0.5, fraction.var = 5e-3)
+
+# Method 2
+bezier_plot(df.repli, sp = 0.5, fraction.var = 5e-3)
+bezier_pvalue(df.repli, sp = 0.5, fraction.var = 5e-3)
+```
+
+
+&nbsp;
+
 &nbsp;
 
 
