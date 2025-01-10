@@ -125,8 +125,8 @@ euclidist_plot <- function(df, cv = "no", sp = 0.5, fraction.var = 5e-3, main.ti
   ind.max <- results[[12]]
   pval <- results[[13]]
 
-  # The curve representing the number as a function of the p-value
-  plot(x, y, xlab = x.title, ylab = y.title)
+  # The curve representing the number as a function of the p-value (asp = numeric, giving the aspect ratio y/x)
+  plot(x, y, xlab = x.title, ylab = y.title)#, asp = 1)
   title(main = main.title)
   # Smoothing of the curve
   lines(smooth.loess$fitted ~ smooth.loess$x, col = "blue3", lwd = 3)
